@@ -5,12 +5,12 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/farazeid/google-files-in-vscode/blob/main/assets/demo.mp4">
+  <a href="https://github.com/farazeid/google-files-in-vscode/raw/refs/heads/main/assets/demo.mp4">
     <img src="assets/demo.gif" alt="Demo: clicking Google Drive shortcuts opens documents in VS Code's integrated browser" width="800">
   </a>
 </p>
 
-<p align="center"><a href="https://github.com/farazeid/google-files-in-vscode/blob/main/assets/demo.mp4">Watch the full 19-second demo</a></p>
+<p align="center"><a href="https://github.com/farazeid/google-files-in-vscode/raw/refs/heads/main/assets/demo.mp4">Download the 19-second MP4</a></p>
 
 ## Abstract
 
