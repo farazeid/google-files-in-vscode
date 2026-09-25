@@ -19,6 +19,10 @@ Google login survived a window reload and a full VS Code quit/relaunch. The fres
 
 Computer reboot persistence remains untested. It requires a user-managed reboot and subsequent check, because rebooting interrupts this task. Recorder permissions, media uploads, AI generation, Forms responses/publication, and exhaustive Google-app functionality are outside these basic edit/save checks.
 
+## Final-package smoke check — 25 September 2026
+
+The current VSIX (SHA-256 `0e915930c1c7139a6174a500429c86be02e30daffdab049d64f3181f76b0bcf2`) was installed in separate fresh profiles on VS Code 1.138.0 and 1.139.0. Both checks passed for all six file associations, activation, custom-editor registration, absence of development commands, and unchanged shortcut bytes. See `evidence/packaged-1.138.0.json` and `evidence/packaged.json`. These isolated checks did not use a Google login or repeat the six live editing tests above.
+
 ## Additional finding: Vids rendered playback
 
 The Vids editor opens and saves text correctly. Its Play viewer displayed a black frame with an accessibility Error Icon and stayed at 0 of 5 seconds when playback was requested. Reproduced before and after the full VS Code restart. The UI did not expose an explanatory error message. Cause is not established; no claim is made that this is a codec issue, Google-side issue, or an extension defect. Playback has not passed acceptance. On 25 September 2026, the user asked to defer this issue for now. The README retains the playback limitation; v0.1.0 makes no claim that rendered Vids playback works in the integrated browser.
