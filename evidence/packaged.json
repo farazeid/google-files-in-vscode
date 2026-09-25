@@ -1,0 +1,13 @@
+{
+  "version": "1.139.0",
+  "platform": "darwin",
+  "packaged": true,
+  "results": [
+    "all six custom-editor file types registered",
+    "installed VSIX activates",
+    "no development API or failure command",
+    "custom editor registered",
+    "shortcut bytes unchanged"
+  ],
+  "recordedAt": "2026-09-24T17:07:27.600Z"
+}

@@ -1,0 +1,174 @@
+{
+  "version": "1.139.0",
+  "platform": "darwin",
+  "arch": "arm64",
+  "osRelease": "27.0.0",
+  "cpu": "Apple M4 Pro",
+  "baseline": true,
+  "samples": [
+    {
+      "scenario": "new-document-browser-warm",
+      "pageReadyMs": 79.30062499999997,
+      "routerGoneMs": 540.35425
+    },
+    {
+      "scenario": "new-document-browser-warm",
+      "pageReadyMs": 72.77570800000012,
+      "routerGoneMs": 526.015541
+    },
+    {
+      "scenario": "new-document-browser-warm",
+      "pageReadyMs": 80.1388750000001,
+      "routerGoneMs": 538.041291
+    },
+    {
+      "scenario": "new-document-browser-warm",
+      "pageReadyMs": 71.359958,
+      "routerGoneMs": 529.7020830000001
+    },
+    {
+      "scenario": "new-document-browser-warm",
+      "pageReadyMs": 67.13274999999976,
+      "routerGoneMs": 526.8501249999999
+    },
+    {
+      "scenario": "new-document-browser-warm",
+      "pageReadyMs": 66.02258399999982,
+      "routerGoneMs": 525.3972920000001
+    },
+    {
+      "scenario": "new-document-browser-warm",
+      "pageReadyMs": 72.30904100000043,
+      "routerGoneMs": 527.9895830000005
+    },
+    {
+      "scenario": "new-document-browser-warm",
+      "pageReadyMs": 70.27624999999989,
+      "routerGoneMs": 532.8339589999996
+    },
+    {
+      "scenario": "new-document-browser-warm",
+      "pageReadyMs": 71.35008300000027,
+      "routerGoneMs": 528.2762910000001
+    },
+    {
+      "scenario": "new-document-browser-warm",
+      "pageReadyMs": 70.70745799999986,
+      "routerGoneMs": 530.0291660000003
+    },
+    {
+      "scenario": "new-document-browser-warm",
+      "pageReadyMs": 71.17558299999928,
+      "routerGoneMs": 530.9323329999997
+    },
+    {
+      "scenario": "new-document-browser-warm",
+      "pageReadyMs": 72.64858400000048,
+      "routerGoneMs": 530.4639999999999
+    },
+    {
+      "scenario": "new-document-browser-warm",
+      "pageReadyMs": 74.33945800000038,
+      "routerGoneMs": 535.3016660000003
+    },
+    {
+      "scenario": "new-document-browser-warm",
+      "pageReadyMs": 75.3559580000001,
+      "routerGoneMs": 532.8947499999995
+    },
+    {
+      "scenario": "new-document-browser-warm",
+      "pageReadyMs": 70.90924999999879,
+      "routerGoneMs": 539.4879579999997
+    },
+    {
+      "scenario": "new-document-browser-warm",
+      "pageReadyMs": 86.21691700000156,
+      "routerGoneMs": 544.4337080000005
+    },
+    {
+      "scenario": "new-document-browser-warm",
+      "pageReadyMs": 70.39358300000094,
+      "routerGoneMs": 526.0349580000002
+    },
+    {
+      "scenario": "new-document-browser-warm",
+      "pageReadyMs": 74.98033299999952,
+      "routerGoneMs": 529.2897910000011
+    },
+    {
+      "scenario": "new-document-browser-warm",
+      "pageReadyMs": 78.49883399999999,
+      "routerGoneMs": 534.5840000000007
+    },
+    {
+      "scenario": "new-document-browser-warm",
+      "pageReadyMs": 80.25950000000012,
+      "routerGoneMs": 537.5251250000001
+    },
+    {
+      "scenario": "new-document-browser-warm",
+      "pageReadyMs": 80.44162499999948,
+      "routerGoneMs": 539.5885419999995
+    },
+    {
+      "scenario": "new-document-browser-warm",
+      "pageReadyMs": 75.40158300000076,
+      "routerGoneMs": 535.8152500000015
+    },
+    {
+      "scenario": "new-document-browser-warm",
+      "pageReadyMs": 71.40799999999945,
+      "routerGoneMs": 526.2834579999999
+    },
+    {
+      "scenario": "new-document-browser-warm",
+      "pageReadyMs": 75.50937500000146,
+      "routerGoneMs": 527.1536660000002
+    },
+    {
+      "scenario": "new-document-browser-warm",
+      "pageReadyMs": 73.21199999999953,
+      "routerGoneMs": 522.6370420000003
+    },
+    {
+      "scenario": "new-document-browser-warm",
+      "pageReadyMs": 71.88520800000151,
+      "routerGoneMs": 527.6865830000006
+    },
+    {
+      "scenario": "new-document-browser-warm",
+      "pageReadyMs": 72.30395800000042,
+      "routerGoneMs": 528.4085830000004
+    },
+    {
+      "scenario": "new-document-browser-warm",
+      "pageReadyMs": 71.48712499999965,
+      "routerGoneMs": 531.194375000001
+    },
+    {
+      "scenario": "new-document-browser-warm",
+      "pageReadyMs": 72.55750000000262,
+      "routerGoneMs": 525.1467499999999
+    },
+    {
+      "scenario": "new-document-browser-warm",
+      "pageReadyMs": 71.9499169999981,
+      "routerGoneMs": 525.8637089999975
+    },
+    {
+      "scenario": "reopen-after-close",
+      "pageReadyMs": 74.48858399999881,
+      "routerGoneMs": 533.2329169999975
+    }
+  ],
+  "failures": [
+    {
+      "scenario": "reopen-after-close",
+      "sample": 2,
+      "reason": "Fixture did not become ready or shortcut did not close within 10 seconds."
+    }
+  ],
+  "conditions": "Fresh temporary VS Code profile per process; synthetic loopback HTML; cache disabled; excludes VS Code process launch. Legacy baseline differs only by fixture origin.",
+  "recordedAt": "2026-09-24T15:19:46.932Z"
+}

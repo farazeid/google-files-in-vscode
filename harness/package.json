@@ -1,0 +1,14 @@
+{
+  "name": "google-files-browser-compatibility",
+  "displayName": "Google Files Browser Compatibility Harness",
+  "version": "0.0.0",
+  "private": true,
+  "publisher": "farazeid",
+  "main": "./out/extension.js",
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "engines": {
+    "vscode": "^1.138.0"
+  }
+}

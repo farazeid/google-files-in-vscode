@@ -1,0 +1,52 @@
+{
+  "summary": [
+    {
+      "variant": "current",
+      "scenario": "first-open-fresh-process",
+      "count": 10,
+      "pageReadyMs": {
+        "median": 102.04506250000003,
+        "p95": 108.70137500000004
+      },
+      "routerGoneMs": {
+        "median": 104.59993800000004,
+        "p95": 114.99787500000002
+      }
+    },
+    {
+      "variant": "current",
+      "scenario": "new-document-browser-warm",
+      "count": 30,
+      "pageReadyMs": {
+        "median": 72.25722950000011,
+        "p95": 85.13679200000024
+      },
+      "routerGoneMs": {
+        "median": 75.70822900000007,
+        "p95": 86.60612500000002
+      }
+    },
+    {
+      "variant": "current",
+      "scenario": "reopen-after-close",
+      "count": 30,
+      "pageReadyMs": {
+        "median": 71.46547950000013,
+        "p95": 75.92149999999947
+      },
+      "routerGoneMs": {
+        "median": 74.73037550000004,
+        "p95": 78.33008400000017
+      }
+    }
+  ],
+  "failures": [],
+  "existingTabSwitching": "Not applicable: reuse explicitly deferred.",
+  "googleReady": "Not measured; local fixture readiness is not Google readiness.",
+  "machine": {
+    "cpu": "Apple M4 Pro",
+    "osRelease": "27.0.0",
+    "arch": "arm64",
+    "vscode": "1.139.0"
+  }
+}

@@ -1,0 +1,38 @@
+name: Validate local release
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  validate:
+    strategy:
+      fail-fast: false
+      matrix:
+        vscode: ["1.138.0", "stable"]
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+      - run: npm ci
+      - run: npm test
+      - run: npm run build:test
+      - name: Download VS Code
+        env:
+          VSCODE_TEST_VERSION: ${{ matrix.vscode }}
+        run: |
+          node --input-type=module -e "import {downloadAndUnzipVSCode,resolveCliPathFromVSCodeExecutablePath} from '@vscode/test-electron'; import {appendFileSync} from 'node:fs'; const path=await downloadAndUnzipVSCode(process.env.VSCODE_TEST_VERSION); appendFileSync(process.env.GITHUB_ENV, 'VSCODE_EXECUTABLE='+path+'\nVSCODE_CLI='+resolveCliPathFromVSCodeExecutablePath(path)+'\n');"
+      - run: node scripts/run-integration.mjs
+      - run: npm run package
+      - run: node scripts/run-integration.mjs --packaged
+      - uses: actions/upload-artifact@v4
+        with:
+          name: local-review-build-${{ matrix.vscode }}
+          path: |
+            *.vsix
+            evidence/integration.json
+            evidence/packaged.json
+            evidence/package-inspection.json

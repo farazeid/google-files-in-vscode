@@ -1,0 +1,18 @@
+{
+  "version": "1.139.0",
+  "platform": "darwin",
+  "arch": "arm64",
+  "osRelease": "27.0.0",
+  "cpu": "Apple M4 Pro",
+  "baseline": true,
+  "samples": [
+    {
+      "scenario": "first-open-fresh-process",
+      "pageReadyMs": 91.20095800000001,
+      "routerGoneMs": 592.832958
+    }
+  ],
+  "failures": [],
+  "conditions": "Fresh temporary VS Code profile per process; synthetic loopback HTML; cache disabled; excludes VS Code process launch. Legacy baseline differs only by fixture origin.",
+  "recordedAt": "2026-09-24T15:19:12.791Z"
+}

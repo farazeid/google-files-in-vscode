@@ -1,0 +1,118 @@
+{
+  "vscodeVersion": "1.139.0",
+  "platform": "darwin",
+  "architecture": "arm64",
+  "runId": "eeb92d28-64bd-4fb2-be91-f020cea19ff1",
+  "timingNote": "Elapsed values include deliberate observation waits; these are not performance benchmarks.",
+  "recordedAt": "2026-09-24T16:30:36.329Z",
+  "gate": "blocked",
+  "proposedApisUsed": false,
+  "remoteDebuggingUsed": false,
+  "privateDocumentsUsed": false,
+  "results": [
+    {
+      "name": "open_new_browser",
+      "status": "passed",
+      "details": {
+        "observations": {
+          "commandReturnsUndefined": true,
+          "added": [
+            {
+              "id": 1,
+              "isActive": true,
+              "isDirty": false,
+              "inputType": "undefined",
+              "inputKeys": []
+            }
+          ],
+          "requests": 1
+        },
+        "elapsedMs": 374.13529200000005
+      }
+    },
+    {
+      "name": "focus_existing_without_navigation",
+      "status": "passed",
+      "details": {
+        "observations": {
+          "commandReturnsUndefined": true,
+          "newTabs": 0,
+          "newRequests": 0
+        },
+        "elapsedMs": 340.842708
+      }
+    },
+    {
+      "name": "url_with_reuse_navigates_again",
+      "status": "passed",
+      "details": {
+        "observations": {
+          "newRequests": 1
+        },
+        "elapsedMs": 23.78212500000018
+      }
+    },
+    {
+      "name": "missing_match_creates_unidentified_blank",
+      "status": "passed",
+      "details": {
+        "observations": {
+          "signature": {
+            "commandReturnsUndefined": true,
+            "addedInputTypes": [
+              "undefined"
+            ],
+            "addedActive": [
+              true
+            ]
+          },
+          "added": [
+            {
+              "id": 2,
+              "isActive": true,
+              "isDirty": false,
+              "inputType": "undefined",
+              "inputKeys": []
+            }
+          ]
+        },
+        "elapsedMs": 333.43437500000005
+      }
+    },
+    {
+      "name": "existing_match_with_concurrent_unrelated_tab_is_ambiguous",
+      "status": "passed",
+      "details": {
+        "observations": {
+          "signature": {
+            "commandReturnsUndefined": true,
+            "addedInputTypes": [
+              "undefined"
+            ],
+            "addedActive": [
+              true
+            ]
+          },
+          "added": [
+            {
+              "id": 3,
+              "isActive": true,
+              "isDirty": false,
+              "inputType": "undefined",
+              "inputKeys": []
+            }
+          ],
+          "newRequests": 0,
+          "conclusion": "The same command result and public tab-input shape can describe a missed probe or an unrelated concurrent tab. Cleanup cannot safely assume ownership."
+        },
+        "elapsedMs": 322.4988330000001
+      }
+    }
+  ],
+  "notRun": [
+    "restored_tab_reuse",
+    "restart_session_persistence",
+    "performance_benchmarks",
+    "Google_document_editing"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "version": "0.1.0",
+  "sha256": "0e915930c1c7139a6174a500429c86be02e30daffdab049d64f3181f76b0bcf2",
+  "bytes": 21721,
+  "files": [
+    "[Content_Types].xml",
+    "extension.vsixmanifest",
+    "extension/LICENSE.txt",
+    "extension/assets/icon.png",
+    "extension/changelog.md",
+    "extension/dist/extension.js",
+    "extension/package.json",
+    "extension/readme.md"
+  ],
+  "productionHooksAbsent": true,
+  "browserTabCleanupAbsent": true,
+  "publicCommands": 3,
+  "supportedShortcutTypes": 6
+}

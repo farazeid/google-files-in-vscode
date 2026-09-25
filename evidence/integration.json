@@ -1,0 +1,19 @@
+{
+  "version": "1.139.0",
+  "platform": "darwin",
+  "packaged": false,
+  "results": [
+    "unavailable: recovery UI rendered with explicit buttons",
+    "failed: recovery UI rendered with explicit buttons",
+    "invalid shortcut has no external fallback",
+    "gdoc: own panel disposed, unrelated text and shortcut preserved",
+    "gsheet: own panel disposed, unrelated text and shortcut preserved",
+    "gslides: own panel disposed, unrelated text and shortcut preserved",
+    "gvid: own panel disposed, unrelated text and shortcut preserved",
+    "gform: own panel disposed, unrelated text and shortcut preserved",
+    "gdraw: own panel disposed, unrelated text and shortcut preserved",
+    "15-second timeout recovery UI rendered",
+    "real browser adapter opens two independent tabs with two document requests"
+  ],
+  "recordedAt": "2026-09-24T17:07:05.367Z"
+}
