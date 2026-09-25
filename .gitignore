@@ -1,0 +1,9 @@
+node_modules/
+harness/out/
+.compatibility/
+*.vsix
+.DS_Store
+dist/
+.test-extension/
+.test-out/
+.vscode-test/

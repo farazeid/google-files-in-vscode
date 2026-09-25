@@ -1,0 +1,13 @@
+{
+  "printWidth": 80,
+  "ignorePatterns": [
+    "node_modules/**",
+    "dist/**",
+    "harness/out/**",
+    ".test-extension/**",
+    ".test-out/**",
+    ".vscode-test/**",
+    "evidence/**",
+    "package-lock.json"
+  ]
+}

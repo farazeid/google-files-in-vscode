@@ -1,0 +1,143 @@
+{
+  "name": "google-files-in-vscode",
+  "displayName": "Google Files in VS Code",
+  "version": "0.1.0",
+  "description": "Open Google Drive shortcuts in VS Code browser tabs.",
+  "categories": [
+    "Other"
+  ],
+  "keywords": [
+    "docs",
+    "drawings",
+    "drive",
+    "forms",
+    "google",
+    "sheets",
+    "slides",
+    "vids"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/farazeid/google-files-in-vscode.git"
+  },
+  "publisher": "farazeid",
+  "main": "./dist/extension.js",
+  "scripts": {
+    "check-types": "tsc --noEmit",
+    "lint": "oxlint --deny-warnings src test scripts harness/src .vscode-test.mjs",
+    "build": "node scripts/build.mjs",
+    "build:test": "node scripts/build.mjs --test",
+    "test:unit": "tsx --test test/unit/*.test.ts",
+    "test:integration": "npm run build:test && vscode-test",
+    "test": "npm run check-types && npm run lint && npm run format:check && npm run test:unit",
+    "vscode:prepublish": "npm run test && npm run build",
+    "package": "node scripts/package.mjs && npm run inspect:package",
+    "test:compatibility": "tsc -p harness/tsconfig.json && node scripts/run-compatibility.mjs",
+    "benchmark": "npm run build:test && node scripts/run-benchmarks.mjs",
+    "lint:fix": "npm run lint -- --fix",
+    "format": "oxfmt --write .",
+    "format:check": "oxfmt --check .",
+    "inspect:package": "node scripts/inspect-package.mjs"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.0",
+    "@types/node": "^22.0.0",
+    "@types/vscode": "1.138.0",
+    "@vscode/test-cli": "^0.0.11",
+    "@vscode/test-electron": "^2.5.0",
+    "@vscode/vsce": "^3.0.0",
+    "esbuild": "^0.25.0",
+    "mocha": "^11.0.0",
+    "oxfmt": "^0.70.0",
+    "oxlint": "^1.85.0",
+    "tsx": "^4.0.0",
+    "typescript": "^5.9.0"
+  },
+  "contributes": {
+    "customEditors": [
+      {
+        "viewType": "googleFiles.shortcut",
+        "displayName": "Google Files",
+        "selector": [
+          {
+            "filenamePattern": "*.gdoc"
+          },
+          {
+            "filenamePattern": "*.gsheet"
+          },
+          {
+            "filenamePattern": "*.gslides"
+          },
+          {
+            "filenamePattern": "*.gvid"
+          },
+          {
+            "filenamePattern": "*.gform"
+          },
+          {
+            "filenamePattern": "*.gdraw"
+          }
+        ],
+        "priority": "default"
+      }
+    ],
+    "commands": [
+      {
+        "command": "googleFiles.open",
+        "title": "Open in VS Code",
+        "category": "Google Files"
+      },
+      {
+        "command": "googleFiles.openExternal",
+        "title": "Open in External Browser",
+        "category": "Google Files"
+      },
+      {
+        "command": "googleFiles.diagnostics",
+        "title": "Show Diagnostics",
+        "category": "Google Files"
+      }
+    ],
+    "menus": {
+      "explorer/context": [
+        {
+          "command": "googleFiles.open",
+          "when": "resourceScheme == file && resourceExtname =~ /\\.(gdoc|gsheet|gslides|gvid|gform|gdraw)$/",
+          "group": "navigation@20"
+        },
+        {
+          "command": "googleFiles.openExternal",
+          "when": "resourceScheme == file && resourceExtname =~ /\\.(gdoc|gsheet|gslides|gvid|gform|gdraw)$/",
+          "group": "navigation@20"
+        }
+      ]
+    },
+    "configuration": {
+      "title": "Google Files",
+      "properties": {
+        "googleFiles.diagnostics.enabled": {
+          "type": "boolean",
+          "default": false,
+          "description": "Record local operation timings and error codes. Does not include file paths, document identifiers, URLs, or account information."
+        }
+      }
+    }
+  },
+  "activationEvents": [],
+  "extensionKind": [
+    "ui"
+  ],
+  "icon": "assets/icon.png",
+  "engines": {
+    "vscode": "^1.138.0"
+  },
+  "capabilities": {
+    "untrustedWorkspaces": {
+      "supported": true
+    },
+    "virtualWorkspaces": {
+      "supported": false
+    }
+  }
+}
