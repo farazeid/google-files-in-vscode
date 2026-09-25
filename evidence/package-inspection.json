@@ -1,7 +1,7 @@
 {
   "version": "0.1.0",
-  "sha256": "0e915930c1c7139a6174a500429c86be02e30daffdab049d64f3181f76b0bcf2",
-  "bytes": 21721,
+  "sha256": "08a1aa2262d30cc1adabda47656e25ad4e93b7abf393d448b6f2c3391f1af4ed",
+  "bytes": 21727,
   "files": [
     "[Content_Types].xml",
     "extension.vsixmanifest",

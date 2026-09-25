@@ -21,7 +21,7 @@ Computer reboot persistence remains untested. It requires a user-managed reboot 
 
 ## Final-package smoke check — 25 September 2026
 
-The current VSIX (SHA-256 `0e915930c1c7139a6174a500429c86be02e30daffdab049d64f3181f76b0bcf2`) was installed in separate fresh profiles on VS Code 1.138.0 and 1.139.0. Both checks passed for all six file associations, activation, custom-editor registration, absence of development commands, and unchanged shortcut bytes. See `evidence/packaged-1.138.0.json` and `evidence/packaged.json`. These isolated checks did not use a Google login or repeat the six live editing tests above.
+The current VSIX (SHA-256 `08a1aa2262d30cc1adabda47656e25ad4e93b7abf393d448b6f2c3391f1af4ed`) was installed in separate fresh profiles on VS Code 1.138.0 and 1.139.0. Both checks passed for all six file associations, activation, custom-editor registration, absence of development commands, and unchanged shortcut bytes. See `evidence/packaged-1.138.0.json` and `evidence/packaged.json`. These isolated checks did not use a Google login or repeat the six live editing tests above.
 
 ## Additional finding: Vids rendered playback
 
